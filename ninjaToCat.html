@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<style>
+			img{
+				display:block;
+				margin:10px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<img src="img/cat0.png" data-alt-src="img/ninja0.png" data-blank="" />
+		<img src="img/cat1.png" data-alt-src="img/ninja1.png" data-blank="" />
+		<img src="img/cat2.png" data-alt-src="img/ninja2.png" data-blank="" />
+		<img src="img/cat3.png" data-alt-src="img/ninja3.png" data-blank="" />
+		<img src="img/cat4.png" data-alt-src="img/ninja4.png" data-blank="" />
+		
+		<script type="text/javascript"></script>
+
+		<script>
+			$(document).ready(function(){
+				$("img").click(function(){
+					$(this).attr("data-blank",$(this).attr("src"));
+					$(this).attr("src",$(this).attr("data-alt-src"));
+					$(this).attr("data-alt-src",$(this).attr("data-blank"));
+					});
+				});
+		</script>
+	</body>
+</html>
